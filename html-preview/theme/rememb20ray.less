@@ -1,0 +1,371 @@
+/**
+ * import styles
+ */
+
+@import url('base.css');
+
+@font-face {
+  font-family: 'Sans Forgetica';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sans Forgetica'), url('./fonts/SansForgetica-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Light'), url('./fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Medium'), url('./fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-color: #5B83AD;
+@body-font: 'Sans Forgetica', serif;
+@header-font: '';
+@monospace-font: '';
+@background-color: white;
+
+html {
+  // default size:
+  font-size: 16px;
+  background-color: @background-color;
+}
+
+html,
+body {
+}
+
+// on Windows/Linux, it is the part that is not titlebar or status bar.
+content {
+}
+
+#write {
+  font-family: @body-font;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+/**
+ * ---------------------
+ * Block Elements
+ */
+
+// yaml
+pre.md-meta-block {
+
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+h1 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 96px;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 60px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  letter-spacing: 0;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.25px;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+h6 {
+  font-family: "Robot", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+}
+
+// table
+table {
+}
+
+// table header
+thead {
+}
+
+// table row
+tr {
+}
+
+// table cell
+td,
+th {
+}
+
+// tooltip above tables
+.md-table-edit {
+
+}
+
+// lists
+ol, ul {
+
+}
+
+li {
+
+}
+
+// blockquote
+blockquote {
+
+}
+
+// hr
+hr {
+
+}
+
+p {
+
+}
+
+// diagram panel
+.md-diagram-panel {
+
+}
+
+// diagram panel in preview
+#write .md-focus .md-diagram-panel {
+
+}
+
+// reference link definition
+.md-def-link {
+
+}
+
+// footnote definition
+.md-def-footnote {
+
+}
+
+/**
+ * Code Fences
+ * see http://support.typora.io/Code-Block-Styles
+ */
+
+/**
+ * Mermaid Diagrams
+ * see https://github.com/knsv/mermaid/blob/master/dist/mermaid.css
+ */
+
+/**
+ * Inline Elements
+ */
+
+// basic styles
+
+code {
+  font-family: "Roboto Mono", sans-serif;
+}
+
+strong {
+
+}
+
+em {
+
+}
+
+a {
+
+}
+
+img {
+
+}
+
+// extend styles
+
+mark {
+
+}
+
+del {
+
+}
+
+sub {
+
+}
+
+sup {
+
+}
+
+/**
+ * Source Code Mode
+ * see http://support.typora.io/Code-Block-Styles
+ */
+#typora-source {
+  .cm-header {
+
+  }
+
+  .cm-strong {
+
+  }
+
+  .cm-em {
+
+  }
+
+  .cm-link {
+
+  }
+
+  .cm-string {
+
+  }
+
+  .cm-comment {
+
+  }
+}
+
+/**
+ * Control UI (optional)
+ */
+
+// button style
+.btn,
+.btn .btn-default {
+  font-family: "Roboto Medium", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+// outline area when popover
+#outline-dropmenu {
+
+}
+
+// side bar
+.pin-outline #outline-dropmenu {
+
+}
+
+// when sidepanel is visible
+.pin-outline #write {
+
+}
+
+// dialogs
+.modal-content {
+}
+
+.modal-title {
+}
+
+// search panel
+#md-searchpanel {
+
+}
+
+#write div.md-toc-tooltip {
+  background-color: @background-color;
+}
+
+/**
+ * Control UI on Mac (optional)
+ */
+
+// quick open panel
+#typora-quick-open {
+  //background-color: #525C65;
+}
+
+#md-searchpanel,
+.on-search-panel-open header,
+.modal-content,
+.popover,
+.context-menu {
+  //background-color: @dialog-background;
+}
+
+.popover.bottom > .arrow:after {
+  //border-bottom-color: @dialog-background;
+}
+
+/**
+ * Control UI on Windows/Linux (optional)
+ */
+
+// context menu
+.context-menu {
+}
+
+// statue bar
+footer {
+
+}
+
+/**
+ * Control UI on Windows Unibody Style (optional)
+ */
+
+// left side mega menu
+.megamenu-content {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
