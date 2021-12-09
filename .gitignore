@@ -1,1 +1,23 @@
-.idea
+# Ignore everything
+*
+
+
+!.gitignore
+!lorem-ipsum.md
+!README.md
+
+!html-preview/
+!html-preview/*/
+html-preview/*.*
+
+!html-preview/html/
+!html-preview/html/*
+!html-preview/theme/
+!html-preview/theme/*
+!html-preview/theme/default/
+!html-preview/theme/default/*
+!html-preview/theme/fonts/
+!html-preview/theme/fonts/*
+
+html-preview/theme/rememb20ray.*
+!html-preview/theme/rememb20ray.less
