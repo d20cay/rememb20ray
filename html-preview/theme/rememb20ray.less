@@ -57,12 +57,15 @@ body {
 
 // on Windows/Linux, it is the part that is not titlebar or status bar.
 content {
+  background: #ffffff;
 }
 
 #write {
   font-family: @body-font;
   font-size: 16px;
   letter-spacing: 0.5px;
+  text-align: justify;
+  max-width: 1000px;
 }
 
 /**
@@ -118,21 +121,77 @@ h6 {
   letter-spacing: 0.15px;
 }
 
+#write > h1:first-child {
+  margin-top: 2.75rem;
+}
+
+#write > h2:first-child {
+  margin-top: 1.75rem;
+}
+
+#write > h3:first-child {
+  margin-top: 1rem;
+}
+
+#write > h4:first-child {
+  margin-top: 0.5rem;
+}
+
+#write > h3.md-focus:before {
+  left: -1.875rem;
+  top: 0.5rem;
+  padding: 2px;
+}
+
+#write > h4.md-focus:before {
+  left: -1.875rem;
+  top: 0.3125rem;
+  padding: 2px;
+}
+
+#write > h5.md-focus:before {
+  left: -1.875rem;
+  top: 0.25rem;
+  padding: 2px;
+}
+
+#write > h6.md-focus:before {
+  left: -1.875rem;
+  top: .125rem;
+  padding: 2px;
+}
+
 // table
 table {
+  margin-bottom: 20px
 }
 
-// table header
-thead {
+table th,
+table td {
+  // Adjust table row spacing and add line to top.
+  padding: 8px;
+  line-height: 1.25rem;
+  vertical-align: top;
+  border-top: 1px solid #ddd
 }
 
-// table row
-tr {
+table th {
+  // Disable bold font in table header for more flexibility. Bold can be added with default markdown bold.
+  font-weight: normal;
 }
 
-// table cell
-td,
-th {
+table thead th {
+  vertical-align: bottom
+}
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  // Remove border from first row of table.
+  border-top: 0
 }
 
 // tooltip above tables
@@ -211,8 +270,13 @@ em {
 
 }
 
-a {
+a,
+.md-def-url {
+  text-decoration: none;
+}
 
+a:hover {
+  text-decoration: underline;
 }
 
 img {
