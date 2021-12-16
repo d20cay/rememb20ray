@@ -4,6 +4,8 @@
 
 @import url('base.css');
 
+@border-radius: 8px;
+
 @font-face {
   font-family: 'Sans Forgetica';
   font-style: normal;
@@ -224,13 +226,41 @@ li {
   -o-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
 }
-.task-list-item > input[type='checkbox']{
+
+.task-list-item > input[type='checkbox'] {
   padding-top: 3em;
 }
 
 // blockquote
 blockquote {
+  position: relative;
+  word-spacing: .06em;
+  margin: 0 1rem;
+  background-color: #f8f8f8;
+  line-height: 1.6;
 
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+  border-radius: @border-radius;
+  background-image: linear-gradient(white, white), linear-gradient(to bottom, #8a8a8a, #f1f1f1);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+blockquote > p {
+  padding: 0 .5em;
+}
+
+blockquote::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+blockquote blockquote {
+  box-shadow: none;
 }
 
 // hr
@@ -280,6 +310,7 @@ p {
 code {
 
 }
+
 code, .md-fences {
   font-family: "Roboto Mono", sans-serif;
   background: #F8F9FA;
@@ -288,16 +319,20 @@ code, .md-fences {
   margin: 0 0 20px;
   padding: 0.3em 0.4em;
 }
+
 .md-fences {
   margin: 0 0 20px;
   padding: 0.4em 1em 0.3em;
 }
+
 .md-fences > .cm-s-inner {
   padding-left: .25em;
 }
+
 .md-fences-with-lineno > .cm-s-inner {
   padding: 0.4em;
 }
+
 .CodeMirror-linenumber {
   text-align: left;
 }
