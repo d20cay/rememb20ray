@@ -257,9 +257,29 @@ p {
  */
 
 // basic styles
-
 code {
+
+}
+code, .md-fences {
   font-family: "Roboto Mono", sans-serif;
+  background: #F8F9FA;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  margin: 0 0 20px;
+  padding: 0.3em 0.4em;
+}
+.md-fences {
+  margin: 0 0 20px;
+  padding: 0.4em 1em 0.3em;
+}
+.md-fences > .cm-s-inner {
+  padding-left: .25em;
+}
+.md-fences-with-lineno > .cm-s-inner {
+  padding: 0.4em;
+}
+.CodeMirror-linenumber {
+  text-align: left;
 }
 
 strong {

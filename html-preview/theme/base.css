@@ -1,18 +1,3 @@
-code, .md-fences {
-	padding: .5em;
-	/*background: #f0f0f0;*/
-	border: 1px solid #ccc;
-	padding: .1em;
-	font-size: 0.9em;
-	margin-left: 0.2em;
-	margin-right: 0.2em;
-}
-.md-fences {
-	margin: 0 0 20px;
-	font-size: 1em;
-	padding: 0.3em 1em;
-  	padding-top: 0.4em;
-}
 .task-list{
 	padding-left: 0;
 }
