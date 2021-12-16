@@ -4,7 +4,11 @@
 
 @import url('base.css');
 
+@body-font: 'Sans Forgetica', serif;
+@background-color: white;
 @border-radius: 8px;
+@paragraph-font-size: 16px;
+@button-font-size: 16px;
 
 @font-face {
   font-family: 'Sans Forgetica';
@@ -41,12 +45,6 @@
   src: local('Roboto Medium'), url('./fonts/Roboto-Light.ttf') format('truetype');
 }
 
-@font-color: #5B83AD;
-@body-font: 'Sans Forgetica', serif;
-@header-font: '';
-@monospace-font: '';
-@background-color: white;
-
 html {
   // default size:
   font-size: 16px;
@@ -64,7 +62,7 @@ content {
 
 #write {
   font-family: @body-font;
-  font-size: 16px;
+  font-size: @paragraph-font-size;
   letter-spacing: 0.5px;
   text-align: justify;
   max-width: 1000px;
@@ -246,6 +244,7 @@ blockquote {
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
+
 blockquote > p {
   padding: 0 .5em;
 }
@@ -265,7 +264,10 @@ blockquote blockquote {
 
 // hr
 hr {
-
+  margin: 30px 0;
+  height: .5px;
+  border: none;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, black));
 }
 
 p {
@@ -414,7 +416,7 @@ sup {
 .btn,
 .btn .btn-default {
   font-family: "Roboto Medium", sans-serif;
-  font-size: 16px;
+  font-size: @button-font-size;
   letter-spacing: 1.25px;
   text-transform: uppercase;
 }
