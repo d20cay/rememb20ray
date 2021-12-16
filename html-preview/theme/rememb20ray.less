@@ -55,10 +55,6 @@ html {
   background-color: @background-color;
 }
 
-html,
-body {
-}
-
 // on Windows/Linux, it is the part that is not titlebar or status bar.
 content {
   background: #ffffff;
@@ -198,20 +194,6 @@ table thead:first-child tr:first-child td {
   border-top: 0
 }
 
-// tooltip above tables
-.md-table-edit {
-
-}
-
-// lists
-ol, ul {
-
-}
-
-li {
-
-}
-
 @task-list-zoom: 1.1;
 
 .task-list-item {
@@ -272,20 +254,6 @@ hr {
   height: .5px;
   border: none;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, black));
-}
-
-p {
-
-}
-
-// diagram panel
-.md-diagram-panel {
-
-}
-
-// diagram panel in preview
-#write .md-focus .md-diagram-panel {
-
 }
 
 // reference link definition
@@ -349,14 +317,6 @@ code, .md-fences {
   text-align: left;
 }
 
-strong {
-
-}
-
-em {
-
-}
-
 a,
 .md-def-url {
   text-decoration: none;
@@ -367,7 +327,7 @@ a:hover {
 }
 
 img {
-
+  border-radius: @border-radius;
 }
 
 // extend styles
