@@ -2,7 +2,8 @@
  * import styles
  */
 
-@import url('base.css');
+@import "base.css";
+@import "components/numbered-headings";
 
 @body-font: 'Sans Forgetica', serif;
 @background-color: white;
@@ -414,6 +415,35 @@ sup {
   .cm-comment {
 
   }
+}
+
+// Table of Contents
+.md-toc {
+  font-family: "Roboto", sans-serif;
+}
+
+.md-toc > .md-toc-content > .md-toc-item.md-toc-h1 {
+  display: none;
+}
+
+.md-toc-item.md-toc-h2 > .md-toc-inner {
+  margin-left: 0;
+}
+
+.md-toc-item.md-toc-h3 > .md-toc-inner {
+  margin-left: 28px * 1;
+}
+
+.md-toc-item.md-toc-h4 > .md-toc-inner {
+  margin-left: 28px * 2;
+}
+
+.md-toc-item.md-toc-h5 > .md-toc-inner {
+  margin-left: 28px * 3;
+}
+
+.md-toc-item.md-toc-h6 > .md-toc-inner {
+  margin-left: 28px * 4;
 }
 
 /**
