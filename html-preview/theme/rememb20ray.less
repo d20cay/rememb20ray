@@ -8,6 +8,7 @@
 @body-font: 'Sans Forgetica', serif;
 @background-color: white;
 @border-radius: 8px;
+@inline-border-radius: 5px;
 
 @paragraph-font-size: 16px;
 @button-font-size: 16px;
@@ -319,14 +320,14 @@ sup.md-footnote {
 
 // basic styles
 code {
-
+  padding: 0 .2em !important;
 }
 
 code, .md-fences {
   font-family: "Roboto Mono", sans-serif;
   background: #F8F9FA;
   border: 1px solid #d9d9d9;
-  border-radius: 8px;
+  border-radius: @inline-border-radius;
   margin: 0 0 20px;
   padding: 0.3em 0.4em;
 }
