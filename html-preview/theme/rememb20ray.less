@@ -2,7 +2,81 @@
  * import styles
  */
 
-@import "base.css";
+// START BASE.CSS
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+and (min-resolution:.001dpcm) {
+  .task-list-item input:before {
+    margin-top: -0.2rem;
+  }
+
+  .task-list-item input:checked:before,
+  .task-list-item input[checked]:before {
+    margin-top: -0.2rem;
+  }
+}
+
+#write pre.md-meta-block {
+  min-height: 30px;
+  background: #f8f8f8;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 3em 1.5em 1.5em;
+  color: #999;
+  border-left: 1000px #f8f8f8 solid;
+  border-right: 1000px #f8f8f8 solid;
+  margin: -1.5em -1000px 2em;
+}
+.MathJax_Display {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+p.mathjax-block,
+.mathjax-block {
+  padding-bottom: 0;
+}
+.mathjax-block>.code-tooltip {
+  bottom: 5px;
+  box-shadow: none;
+}
+.md-image>.md-meta {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.md-image>img {
+  margin-top: 2px;
+}
+.md-image>.md-meta:first-of-type:before {
+  padding-left: 4px;
+}
+
+#typora-source {
+  color: #555;
+}
+
+/** ui for windows **/
+#md-searchpanel {
+  border-bottom: 1px solid #ccc;
+}
+
+#md-searchpanel .btn {
+  border: 1px solid #ccc;
+}
+
+#md-notification:before {
+  top: 14px;
+}
+
+#md-notification {
+  background: #eee;
+}
+
+.megamenu-menu-panel .btn {
+  border: 1px solid #ccc;
+}
+// START BASE.CSS
+
 @import "components/numbered-headings";
 
 @body-font: 'Sans Forgetica', serif;
@@ -18,35 +92,35 @@
   font-family: 'Sans Forgetica';
   font-style: normal;
   font-weight: 400;
-  src: local('Sans Forgetica'), url('./fonts/SansForgetica-Regular.otf') format('opentype');
+  src: local('Sans Forgetica'), url('rememb20ray/fonts/SansForgetica-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), url('./fonts/Roboto-Regular.ttf') format('truetype');
+  src: local('Roboto'), url('rememb20ray/fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto Light';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Light'), url('./fonts/Roboto-Light.ttf') format('truetype');
+  src: local('Roboto Light'), url('rememb20ray/fonts/Roboto-Light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Mono'), url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+  src: local('Roboto Mono'), url('rememb20ray/fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto Medium';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Medium'), url('./fonts/Roboto-Light.ttf') format('truetype');
+  src: local('Roboto Medium'), url('rememb20ray/fonts/Roboto-Light.ttf') format('truetype');
 }
 
 html {
