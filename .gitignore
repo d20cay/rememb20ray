@@ -21,3 +21,5 @@ html-preview/*.*
 
 html-preview/theme/rememb20ray.*
 !html-preview/theme/rememb20ray.less
+html-preview/theme/rememb20ray-clean.*
+!html-preview/theme/rememb20ray-clean.less
