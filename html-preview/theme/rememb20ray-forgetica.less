@@ -1,0 +1,497 @@
+/**
+ * import styles
+ */
+
+// START BASE.CSS
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+and (min-resolution:.001dpcm) {
+  .task-list-item input:before {
+    margin-top: -0.2rem;
+  }
+
+  .task-list-item input:checked:before,
+  .task-list-item input[checked]:before {
+    margin-top: -0.2rem;
+  }
+}
+
+#write pre.md-meta-block {
+  min-height: 30px;
+  background: #f8f8f8;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 3em 1.5em 1.5em;
+  color: #999;
+  border-left: 1000px #f8f8f8 solid;
+  border-right: 1000px #f8f8f8 solid;
+  margin: -1.5em -1000px 2em;
+}
+.MathJax_Display {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+p.mathjax-block,
+.mathjax-block {
+  padding-bottom: 0;
+}
+.mathjax-block>.code-tooltip {
+  bottom: 5px;
+  box-shadow: none;
+}
+.md-image>.md-meta {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.md-image>img {
+  margin-top: 2px;
+}
+.md-image>.md-meta:first-of-type:before {
+  padding-left: 4px;
+}
+
+#typora-source {
+  color: #555;
+}
+
+/** ui for windows **/
+#md-searchpanel {
+  border-bottom: 1px solid #ccc;
+}
+
+#md-searchpanel .btn {
+  border: 1px solid #ccc;
+}
+
+#md-notification:before {
+  top: 14px;
+}
+
+#md-notification {
+  background: #eee;
+}
+
+.megamenu-menu-panel .btn {
+  border: 1px solid #ccc;
+}
+// START BASE.CSS
+
+@import "components/numbered-headings";
+
+@body-font: 'Sans Forgetica', serif;
+@background-color: white;
+@border-radius: 8px;
+@inline-border-radius: 5px;
+
+@paragraph-font-size: 16px;
+@button-font-size: 16px;
+@subscript-font-size: 12px;
+
+@font-face {
+  font-family: 'Sans Forgetica';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sans Forgetica'), url('rememb20ray/fonts/SansForgetica-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), url('rememb20ray/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Light'), url('rememb20ray/fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), url('rememb20ray/fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Medium'), url('rememb20ray/fonts/Roboto-Light.ttf') format('truetype');
+}
+
+html {
+  // default size:
+  font-size: 16px;
+  background-color: @background-color;
+}
+
+// on Windows/Linux, it is the part that is not titlebar or status bar.
+content {
+  background: #ffffff;
+}
+
+#write {
+  font-family: @body-font;
+  font-size: @paragraph-font-size;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  max-width: 1000px;
+}
+
+/**
+ * ---------------------
+ * Block Elements
+ */
+
+// yaml
+pre.md-meta-block {
+
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+h1 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 96px;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 60px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  letter-spacing: 0;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.25px;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+h6 {
+  font-family: "Robot", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+}
+
+#write > h1:first-child {
+  margin-top: 2.75rem;
+}
+
+#write > h2:first-child {
+  margin-top: 1.75rem;
+}
+
+#write > h3:first-child {
+  margin-top: 1rem;
+}
+
+#write > h4:first-child {
+  margin-top: 0.5rem;
+}
+
+#write > h3.md-focus:before {
+  left: -1.875rem;
+  top: 0.5rem;
+  padding: 2px;
+}
+
+#write > h4.md-focus:before {
+  left: -1.875rem;
+  top: 0.3125rem;
+  padding: 2px;
+}
+
+#write > h5.md-focus:before {
+  left: -1.875rem;
+  top: 0.25rem;
+  padding: 2px;
+}
+
+#write > h6.md-focus:before {
+  left: -1.875rem;
+  top: .125rem;
+  padding: 2px;
+}
+
+// table
+table {
+  margin-bottom: 20px
+}
+
+table th,
+table td {
+  // Adjust table row spacing and add line to top.
+  padding: 8px;
+  line-height: 1.25rem;
+  vertical-align: top;
+  border-top: 1px solid #ddd
+}
+
+table th {
+  // Disable bold font in table header for more flexibility. Bold can be added with default markdown bold.
+  font-weight: normal;
+}
+
+table thead th {
+  vertical-align: bottom
+}
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  // Remove border from first row of table.
+  border-top: 0
+}
+
+@task-list-zoom: 1.1;
+
+.task-list-item {
+  padding-left: 1.2em;
+  zoom: @task-list-zoom;
+  transform: scale(@task-list-zoom);
+  -ms-transform: scale(@task-list-zoom);
+  -webkit-transform: scale(@task-list-zoom);
+  -o-transform: scale(@task-list-zoom);
+  -moz-transform: scale(@task-list-zoom);
+  transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+}
+
+.task-list-item > input[type='checkbox'] {
+  padding-top: 3em;
+}
+
+// blockquote
+blockquote {
+  position: relative;
+  word-spacing: .06em;
+  margin: 0 1rem;
+  background-color: #f8f8f8;
+  line-height: 1.6;
+
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+  border-radius: @border-radius;
+  background-image: linear-gradient(white, white), linear-gradient(to bottom, #8a8a8a, #f1f1f1);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+blockquote > p {
+  padding: 0 .5em;
+}
+
+blockquote::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+blockquote blockquote {
+  box-shadow: none;
+}
+
+// hr
+hr {
+  margin: 30px 0;
+  height: .5px;
+  border: none;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, black));
+}
+
+// reference link definition
+.md-def-link {
+
+}
+
+// footnote
+sup.md-footnote {
+  border-radius: 100%;
+  padding: 4px 6px 4px 4px;
+  font-size: @subscript-font-size;
+}
+
+.md-def-footnote {
+  font-family: "Roboto", sans-serif;
+}
+
+/**
+ * Code Fences
+ * see http://support.typora.io/Code-Block-Styles
+ */
+
+/**
+ * Mermaid Diagrams
+ * see https://github.com/knsv/mermaid/blob/master/dist/mermaid.css
+ */
+
+/**
+ * Inline Elements
+ */
+
+// basic styles
+code {
+  padding: 0 .2em !important;
+}
+
+code, .md-fences {
+  font-family: "Roboto Mono", sans-serif;
+  background: #F8F9FA;
+  border: 1px solid #d9d9d9;
+  border-radius: @inline-border-radius;
+  margin: 0 0 20px;
+  padding: 0.3em 0.4em;
+}
+
+.md-fences {
+  margin: 0 0 20px;
+  padding: 0.4em 1em 0.3em;
+}
+
+.md-fences > .cm-s-inner {
+  padding-left: .25em;
+}
+
+.md-fences-with-lineno > .cm-s-inner {
+  padding: 0.4em;
+}
+
+.CodeMirror-linenumber {
+  text-align: left;
+}
+
+a,
+.md-def-url {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border-radius: @border-radius;
+}
+
+// extend styles
+
+mark {
+
+}
+
+del {
+
+}
+
+sub {
+
+}
+
+sup {
+
+}
+
+/**
+ * Source Code Mode
+ * see http://support.typora.io/Code-Block-Styles
+ */
+#typora-source {
+  font-family: "Roboto Mono", sans-serif;
+
+  .cm-header {
+    font-size: @paragraph-font-size;
+    color: black;
+  }
+
+  .cm-del {
+    text-decoration: none;
+  }
+}
+
+// Table of Contents
+.md-toc {
+  font-family: "Roboto", sans-serif;
+}
+
+.md-toc > .md-toc-content > .md-toc-item.md-toc-h1 {
+  display: none;
+}
+
+.md-toc-item.md-toc-h2 > .md-toc-inner {
+  margin-left: 0;
+}
+
+.md-toc-item.md-toc-h3 > .md-toc-inner {
+  margin-left: 28px * 1;
+}
+
+.md-toc-item.md-toc-h4 > .md-toc-inner {
+  margin-left: 28px * 2;
+}
+
+.md-toc-item.md-toc-h5 > .md-toc-inner {
+  margin-left: 28px * 3;
+}
+
+.md-toc-item.md-toc-h6 > .md-toc-inner {
+  margin-left: 28px * 4;
+}
+
+/**
+ * Control UI (optional)
+ */
+
+// button style
+.btn,
+.btn .btn-default {
+  font-family: "Roboto Medium", sans-serif;
+  font-size: @button-font-size;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+#write div.md-toc-tooltip {
+  background-color: @background-color;
+}
+
+
+
+
+
+
+
+
+
+
+
