@@ -7,8 +7,10 @@
 @body-font: 'Sans Forgetica', serif;
 @background-color: white;
 @border-radius: 8px;
+
 @paragraph-font-size: 16px;
 @button-font-size: 16px;
+@subscript-font-size: 12px;
 
 @font-face {
   font-family: 'Sans Forgetica';
@@ -289,9 +291,15 @@ p {
 
 }
 
-// footnote definition
-.md-def-footnote {
+// footnote
+sup.md-footnote {
+  border-radius: 100%;
+  padding: 4px 6px 4px 4px;
+  font-size: @subscript-font-size;
+}
 
+.md-def-footnote {
+  font-family: "Roboto", sans-serif;
 }
 
 /**
